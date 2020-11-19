@@ -48,7 +48,7 @@ def get_euclidean_distance(A_matrix, B_matrix):
     """
 
     A_square = np.reshape(np.sum(A_matrix * A_matrix, axis=1), (A_matrix.shape[0], 1))
-    B_square = np.reshape(np.sum(B_matrix * B_matrix, axis=1), (B_matrix.shape[0]), 1)
+    B_square = np.reshape(np.sum(B_matrix * B_matrix, axis=1), (1, B_matrix.shape[0]))
     AB = A_matrix @ B_matrix.T
 
     C = -2 * AB + B_square + A_square
